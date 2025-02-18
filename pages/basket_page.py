@@ -3,8 +3,8 @@ from .base_page import BasePage
 
 class BasketPage(BasePage):
     def __init__(self, browser, url):
-        self.browser = browser
-        self.url = url
+        super().__init__(browser, url)  # Вызов конструктора родительского класса
+
 
     def open(self):
         self.browser.get(self.url)
